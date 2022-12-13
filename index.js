@@ -1,5 +1,18 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  // iterate through each number in the array
+  for(let i = 0; i < array.length; i++) {
+
+    const complement = target - array[i]
+    for(let j = i + 1; j < array.length; j++) {
+
+      if(array[j] === complement) return true;
+    }
+  }
+
+  // if i reach the end of array 
+
+  return false;
 }
 
 /* 
@@ -8,6 +21,7 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  make a function called has target sum that checks up two numbers from the array adds up to the taget number. 
 */
 
 /*
